@@ -15,28 +15,21 @@ body {
   overflow-x: hidden;
 }
 
-/* ATMOSPHERIC BACKGROUND */
-
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.82)
     ),
     url("assets/images/trace-hero.png");
-
   background-size: cover;
   background-position: center;
-
   opacity: 0.22;
-
   filter: blur(2px) saturate(0.9);
   transform: scale(1.03);
-
   z-index: -2;
 }
 
@@ -44,7 +37,6 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-
   background:
     radial-gradient(
       circle at top left,
@@ -56,26 +48,19 @@ body::after {
       rgba(120, 150, 255, 0.08),
       transparent 35%
     );
-
   pointer-events: none;
   z-index: -1;
 }
 
-/* HEADER */
-
 header {
   position: sticky;
   top: 0;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 24px 8%;
-
   backdrop-filter: blur(18px);
   background: rgba(11, 11, 11, 0.55);
-
   z-index: 10;
 }
 
@@ -110,18 +95,28 @@ footer a:hover {
   opacity: 1;
 }
 
-/* HERO */
-
 .hero {
+  position: relative;
   min-height: 82vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 96px 8%;
-
   max-width: 1100px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 72px;
+  left: 8%;
+  width: 120px;
+  height: 1px;
+  background: rgba(243, 237, 228, 0.4);
+}
+
+.hero h1 {
+  text-wrap: balance;
 }
 
 .eyebrow,
@@ -130,7 +125,6 @@ footer a:hover {
   letter-spacing: 0.14em;
   font-size: 0.75rem;
   color: #b8aba0;
-
   margin: 0 0 18px;
 }
 
@@ -144,59 +138,43 @@ p {
 h1 {
   font-size: clamp(4rem, 9vw, 8rem);
   line-height: 0.92;
-
   letter-spacing: -0.07em;
   font-weight: 800;
-
   max-width: 10ch;
-
   margin-bottom: 24px;
 }
 
 h2 {
   font-size: clamp(2.3rem, 5vw, 4.5rem);
   line-height: 1;
-
   letter-spacing: -0.06em;
   font-weight: 750;
-
   max-width: 850px;
-
   margin-bottom: 48px;
 }
 
 h3 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1;
-
   letter-spacing: -0.06em;
   font-weight: 700;
-
   margin-bottom: 12px;
 }
 
 .intro {
   font-size: clamp(1.1rem, 2vw, 1.35rem);
-
   max-width: 650px;
-
-  color: #d8cec5;
+  color: rgba(243, 237, 228, 0.76);
 }
-
-/* BUTTON */
 
 .button {
   width: fit-content;
-
   margin-top: 24px;
   padding: 14px 22px;
-
   border: 1px solid rgba(243, 237, 228, 0.6);
   border-radius: 999px;
-
   color: #f3ede4;
   text-decoration: none;
-
   transition:
     background 0.25s ease,
     color 0.25s ease,
@@ -206,11 +184,8 @@ h3 {
 .button:hover {
   background: #f3ede4;
   color: #0b0b0b;
-
   transform: translateY(-2px);
 }
-
-/* SECTIONS */
 
 .work,
 .about,
@@ -218,46 +193,54 @@ footer {
   padding: 96px 8%;
 }
 
-/* PROJECTS */
-
 .project-card {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-
   gap: 32px;
-
   max-width: 1100px;
-
-  padding: 42px 0;
-
+  padding: 48px 0;
   border-top: 1px solid rgba(243, 237, 228, 0.16);
-
-  transition: opacity 0.3s ease;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .project-card:hover {
-  opacity: 0.9;
+  transform: translateY(-4px);
+  opacity: 0.95;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: rgba(243, 237, 228, 0.7);
+  transition: width 0.4s ease;
+}
+
+.project-card:hover::after {
+  width: 100%;
 }
 
 .project-card p:last-child {
-  color: #d8cec5;
+  color: rgba(243, 237, 228, 0.76);
   font-size: 1.05rem;
   max-width: 560px;
 }
-
-/* ABOUT */
 
 .about {
   max-width: 1100px;
 }
 
 .about p:last-child {
-  color: #d8cec5;
+  color: rgba(243, 237, 228, 0.76);
   font-size: 1.08rem;
   max-width: 720px;
 }
-
-/* FOOTER */
 
 footer {
   border-top: 1px solid rgba(243, 237, 228, 0.16);
@@ -267,10 +250,7 @@ footer p {
   color: #b8aba0;
 }
 
-/* MOBILE */
-
 @media (max-width: 760px) {
-
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -279,10 +259,15 @@ footer p {
 
   nav {
     gap: 16px;
+    flex-wrap: wrap;
   }
 
   .hero {
     padding-top: 72px;
+  }
+
+  .hero::after {
+    bottom: 48px;
   }
 
   .project-card {
