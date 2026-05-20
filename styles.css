@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5efe7;
+  color: #2d2926;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: #2d2926;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a,
+footer a {
+  color: #2d2926;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 70vh;
+  padding: 96px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.eyebrow,
+.project-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #7a6f68;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+.intro {
+  font-size: 1.25rem;
+  max-width: 650px;
+}
+
+.button {
+  width: fit-content;
+  margin-top: 24px;
+  padding: 14px 22px;
+  border: 1px solid #2d2926;
+  border-radius: 999px;
+  color: #2d2926;
+  text-decoration: none;
+}
+
+.work,
+.about,
+footer {
+  padding: 80px 8%;
+}
+
+.project-card {
+  border-top: 1px solid #d6c8bb;
+  padding: 32px 0;
+  max-width: 850px;
+}
+
+footer {
+  border-top: 1px solid #d6c8bb;
+}
