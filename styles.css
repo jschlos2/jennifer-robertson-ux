@@ -663,3 +663,181 @@ footer a {
     padding: 96px 8%;
   }
 }
+/* HEIWA CASE STUDY */
+
+.heiwa-page {
+  background: #f3efe4;
+  color: #212e40;
+}
+
+.heiwa-page::before,
+.heiwa-page::after {
+  display: none;
+}
+
+.heiwa-page header {
+  background: rgba(243, 239, 228, 0.78);
+}
+
+.heiwa-page .logo,
+.heiwa-page nav a {
+  color: #212e40;
+}
+
+.heiwa-page .eyebrow {
+  color: #4f6074;
+}
+
+.heiwa-hero {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 120px 8% 96px;
+}
+
+.heiwa-hero h1 {
+  max-width: 11ch;
+}
+
+.heiwa-hero .intro,
+.heiwa-section p:last-child,
+.heiwa-feature-copy p,
+.heiwa-design-system p {
+  color: rgba(33, 46, 64, 0.76);
+}
+
+.heiwa-hero-image,
+.heiwa-image-block,
+.heiwa-feature img,
+.heiwa-gallery img,
+.heiwa-design-system img {
+  border-radius: 32px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(33, 46, 64, 0.16);
+  border: 1px solid rgba(33, 46, 64, 0.08);
+}
+
+.heiwa-hero-image img,
+.heiwa-image-block img,
+.heiwa-feature img,
+.heiwa-gallery img,
+.heiwa-design-system img {
+  width: 100%;
+  display: block;
+}
+
+.heiwa-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 0 8% 96px;
+  max-width: 1180px;
+}
+
+.heiwa-overview p:last-child {
+  color: rgba(33, 46, 64, 0.72);
+}
+
+.heiwa-section {
+  padding: 96px 8%;
+  max-width: 980px;
+}
+
+.heiwa-section.split {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.heiwa-image-block {
+  margin: 0 8% 96px;
+}
+
+.heiwa-image-block img {
+  max-height: 780px;
+  object-fit: cover;
+}
+
+.heiwa-feature {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 96px 8%;
+}
+
+.heiwa-feature.reverse {
+  grid-template-columns: 1fr 0.75fr;
+}
+
+.heiwa-feature.reverse .heiwa-feature-copy {
+  order: 2;
+}
+
+.heiwa-feature.reverse img {
+  order: 1;
+}
+
+.heiwa-feature img {
+  max-height: 820px;
+  object-fit: contain;
+  background: #f8f5ec;
+}
+
+.heiwa-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 24px 8% 96px;
+}
+
+.heiwa-gallery img {
+  max-height: 780px;
+  object-fit: contain;
+  background: #f8f5ec;
+}
+
+.heiwa-design-system {
+  padding: 96px 8%;
+}
+
+.heiwa-design-system p {
+  max-width: 720px;
+  font-size: 1.08rem;
+}
+
+.heiwa-design-system img {
+  margin-top: 40px;
+}
+
+@media (max-width: 760px) {
+  .heiwa-hero,
+  .heiwa-feature,
+  .heiwa-feature.reverse,
+  .heiwa-section.split,
+  .heiwa-gallery,
+  .heiwa-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .heiwa-hero {
+    padding-top: 88px;
+    gap: 40px;
+  }
+
+  .heiwa-feature.reverse .heiwa-feature-copy,
+  .heiwa-feature.reverse img {
+    order: initial;
+  }
+
+  .heiwa-hero-image,
+  .heiwa-image-block,
+  .heiwa-feature img,
+  .heiwa-gallery img,
+  .heiwa-design-system img {
+    border-radius: 22px;
+  }
+}
