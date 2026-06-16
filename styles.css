@@ -841,3 +841,224 @@ footer a {
     border-radius: 22px;
   }
 }
+/* TINY TUNA CASE STUDY */
+
+.tiny-tuna-page {
+  background: #dff8fb;
+  color: #26353a;
+}
+
+.tiny-tuna-page::before,
+.tiny-tuna-page::after {
+  display: none;
+}
+
+.tiny-tuna-page header {
+  background: rgba(223, 248, 251, 0.78);
+}
+
+.tiny-tuna-page .logo,
+.tiny-tuna-page nav a {
+  color: #26353a;
+}
+
+.tiny-tuna-page .eyebrow {
+  color: #407d89;
+}
+
+.tuna-hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 120px 8% 96px;
+}
+
+.tuna-hero h1 {
+  max-width: 12ch;
+}
+
+.tuna-hero .intro,
+.tuna-section p:last-child,
+.tuna-overview p:last-child {
+  color: rgba(38, 53, 58, 0.74);
+}
+
+.tuna-hero-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+  border-radius: 40px;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.9), rgba(185, 233, 240, 0.45));
+  border: 1px solid rgba(38, 53, 58, 0.08);
+  box-shadow: 0 24px 80px rgba(38, 53, 58, 0.14);
+}
+
+.tuna-hero-gif img {
+  width: min(70%, 560px);
+  height: auto;
+}
+
+.tuna-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 0 8% 96px;
+  max-width: 1180px;
+}
+
+.tuna-section {
+  padding: 96px 8%;
+  max-width: 980px;
+}
+
+.tuna-section.split {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.tuna-section.split > div,
+.tuna-section.split > p {
+  max-width: 640px;
+}
+
+.tuna-section.split h2 {
+  font-size: clamp(2.6rem, 3.8vw, 4.3rem);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+  max-width: 700px;
+}
+
+.tuna-prompt-card {
+  margin: 0 8% 96px;
+  padding: 64px;
+  border-radius: 36px;
+  background: #fff7f2;
+  border: 1px solid rgba(38, 53, 58, 0.08);
+  box-shadow: 0 24px 80px rgba(38, 53, 58, 0.12);
+}
+
+.tuna-prompt-card h2 {
+  max-width: 900px;
+}
+
+.brand-image {
+  margin-top: 48px;
+}
+
+.brand-image img {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(38, 53, 58, 0.12);
+}
+
+.tuna-states {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px 8% 96px;
+}
+
+.tuna-state {
+  padding: 32px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(38, 53, 58, 0.08);
+  text-align: center;
+  box-shadow: 0 18px 60px rgba(38, 53, 58, 0.10);
+}
+
+.tuna-state img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.tuna-state h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 760px) {
+  .tuna-hero,
+  .tuna-overview,
+  .tuna-section.split,
+  .tuna-states {
+    grid-template-columns: 1fr;
+  }
+
+  .tuna-hero {
+    padding-top: 88px;
+    gap: 40px;
+  }
+
+  .tuna-hero-gif {
+    min-height: 360px;
+    border-radius: 28px;
+  }
+
+  .tuna-hero-gif img {
+    width: 82%;
+  }
+
+  .tuna-section.split {
+    gap: 24px;
+  }
+
+  .tuna-section.split h2 {
+    font-size: clamp(2.3rem, 11vw, 4rem);
+    max-width: none;
+  }
+
+  .tuna-prompt-card {
+    padding: 32px;
+    border-radius: 24px;
+  }
+
+  .brand-image img {
+    border-radius: 22px;
+  }
+}
+/* FINAL TINY TUNA TYPE FIX */
+
+.tiny-tuna-page h2 {
+  font-size: clamp(2.4rem, 3.6vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  max-width: 760px;
+}
+
+.tiny-tuna-page .tuna-section.split h2 {
+  max-width: 720px;
+}
+
+.tiny-tuna-page .tuna-prompt-card h2 {
+  max-width: 960px;
+}
+.tiny-tuna-page .tuna-section.split {
+  display: block !important;
+  max-width: 980px !important;
+}
+
+.tiny-tuna-page .tuna-section.split > div,
+.tiny-tuna-page .tuna-section.split > p {
+  max-width: 720px !important;
+}
+
+.tiny-tuna-page .tuna-section.split h2 {
+  font-size: clamp(2.4rem, 3.6vw, 4rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.045em !important;
+  max-width: 760px !important;
+}
+
+.tiny-tuna-page .tuna-section.split > p {
+  margin-top: 32px;
+}
