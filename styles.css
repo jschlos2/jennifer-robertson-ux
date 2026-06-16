@@ -261,6 +261,13 @@ footer {
   justify-content: center;
   background: #f3efe4;
 }
+.heiwa-card-image {
+  height: 460px;
+}
+
+.heiwa-card-image img {
+  width: 70%;
+}
 
 /* ABOUT */
 .about {
@@ -916,4 +923,32 @@ footer a {
   height: auto;
   border-radius: 36px;
   box-shadow: 0 24px 60px rgba(33, 46, 64, 0.16);
+}
+/* HEIWA HOMEPAGE CARD PREVIEW FIX */
+
+.project-image.heiwa-card-image {
+  height: 340px;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8f5ec;
+  overflow: hidden;
+}
+
+.project-image.heiwa-card-image img {
+  width: 34%;
+  height: auto;
+  max-height: 88%;
+
+  object-fit: contain;
+  object-position: center center;
+
+  transform: none;
+}
+
+.project-card:hover .project-image.heiwa-card-image img {
+  transform: scale(1.02);
 }
